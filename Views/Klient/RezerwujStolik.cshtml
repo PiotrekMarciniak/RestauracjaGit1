@@ -1,0 +1,13 @@
+﻿@model Restauracja.Models.StolikiVM
+
+<h2>Rezerwacja Stolika</h2>
+<form asp-action="ZapiszRezerwacje">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Ilosc_miejsc">Liczba osób</label>
+        <input asp-for="Ilosc_miejsc" class="form-control" readonly />
+    </div>
+    <input type="hidden" name="StolikId" value="@Model.Id" />
+
+    <button type="submit" class="btn btn-primary">Zarezerwuj</button>
+</form>

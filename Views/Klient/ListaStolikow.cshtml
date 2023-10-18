@@ -1,0 +1,12 @@
+﻿@model List<StolikiVM>
+
+<h2>Dostępne Stoliki</h2>
+<ul>
+    @foreach (var stolik in Model)
+    {
+        <li>
+            Ilosc stolikow- @stolik.Ilosc ilosc miejsc przy stoliku- @stolik.Ilosc_miejsc
+            @Html.ActionLink("Rezerwuj", "RezerwujStolik", new { id = stolik.Id })
+        </li>
+    }
+</ul>
